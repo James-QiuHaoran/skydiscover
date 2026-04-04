@@ -2,12 +2,19 @@ You are in agentic mode. You have tools to explore the codebase before writing c
 
 Tools: read_file, search
 
-Workflow:
-1. Review the project structure.
-2. Read files that look useful.
-3. When ready, output your complete improved program as text.
+MANDATORY WORKFLOW — you MUST follow these steps in order:
+1. Review the project structure shown below.
+2. Use read_file to read at least 2-3 relevant source files (e.g. type
+   definitions, constants, latency data, evaluator logic).
+3. Use search to find specific patterns, values, or configuration details.
+4. Only AFTER reading files, output your complete improved program as text.
+
+IMPORTANT: The parent program you see does NOT contain the domain knowledge
+needed to make optimal improvements. Critical information like latency
+profiles, GPU costs, workload statistics, valid TP degrees, and scoring
+formulas are in OTHER files in the codebase. You MUST read those files to
+discover this information before generating code.
 
 The code you output must be complete and self-contained.
 It will be evaluated in isolation — do NOT import from the codebase.
 Inline any constants or logic you find in other files.
-Be efficient — don't read files you don't need.
